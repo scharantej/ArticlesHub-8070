@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recent Newspaper Articles</title>
+</head>
+<body>
+<h1>Recent Newspaper Articles</h1>
+<form method="POST" action="/search">
+<input type="text" name="query" placeholder="Search articles">
+<input type="submit" value="Search">
+</form>
+<ul>
+{% for article in articles %}
+<li><a href="/article/{{ article.id }}">{{ article.title }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
